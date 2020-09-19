@@ -1,4 +1,4 @@
-package com.common.lang;
+package com.markerhub.common.lang;
 
 import lombok.Data;
 
@@ -44,4 +44,6 @@ public class Result implements Serializable {
     public static Result fail(String msg){
         return fail(400,msg,null);
     }
+
+
 }
