@@ -21,14 +21,6 @@ public interface UserService{
     User getOne(String userName);
 
     /**
-     *
-     * @param id
-     * @return
-     */
-    User getById(long id);
-
-
-    /**
      * @param user
      */
     void insertOne(User user);
@@ -43,4 +35,10 @@ public interface UserService{
      * @param user
      */
     void deleteOne(User user);
+
+    /**
+     * @param id
+     * @return
+     */
+    User getById(Long id);
 }

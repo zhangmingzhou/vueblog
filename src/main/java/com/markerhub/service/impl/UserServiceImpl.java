@@ -41,11 +41,6 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User getById(long id) {
-        return null;
-    }
-
-    @Override
     public void insertOne(User user) {
 
         LocalDateTime create = LocalDateTime.now();
@@ -69,6 +64,15 @@ public class UserServiceImpl implements UserService {
     @Override
     public void deleteOne(User user) {
         userMapper.deleteOne(user);
+    }
+
+    @Override
+    public User getById(Long id) {
+        User user = userMapper.getById(id);
+        if (user == null){
+            throw new BlogException(BlogError.UserNotFound);
+        }
+        return user;
     }
 
 
