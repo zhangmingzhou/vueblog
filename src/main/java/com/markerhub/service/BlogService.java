@@ -13,4 +13,19 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface BlogService extends IService<Blog> {
 
+    /**
+     * @param id
+     * @return
+     */
+    Blog getById(Long id);
+
+    /**
+     * @param blog
+     */
+    void insertOne(Blog blog);
+
+    /**
+     * @param id
+     */
+    void deleteOne(Long id);
 }
